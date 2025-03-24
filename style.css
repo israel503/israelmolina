@@ -5706,7 +5706,7 @@ form .btn-lg {
   border: 0;
 }
 .price-table-one .tab-content .tab-pane:nth-child(2) .single-price-content {
-  background-color: var(--danger-500);
+  background-color: var(--seccion-store);
 }
 .price-table-one .tab-content .tab-pane:nth-child(3) .single-price-content {
   background-color: var(--success-500);
