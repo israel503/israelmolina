@@ -949,7 +949,7 @@ caption,
 /* :: Reboot */
 :root {
   /**/
-  --primary-50: #7bf0f8;
+  --primary-50: #2e3030ce;
   --primary-100: #e1eaff;
   --primary-200: #c2d5ff;
   --primary-300: #9abafe;
@@ -959,7 +959,7 @@ caption,
   --primary-700: #0244d4;
   --primary-800: #0139b1;
   --primary-900: #01297e;
-  --primary-950: #0092a3;
+  --primary-950: #011542;
   --secondary-500: #8696a7;
   --secondary-700: #546474;
   --success-500: #2ecc4a;
