@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Affan - PWA Mobile HTML Template">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+  <meta name="theme-color" content="#0134d4">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+  <!-- Title -->
+  <title>Israel Molina</title>
+
+  <!-- Favicon -->
+  <link rel="icon" href="img/core-img/favicon.ico">
+  <link rel="apple-touch-icon" href="img/icons/icon-96x96.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="img/icons/icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="167x167" href="img/icons/icon-167x167.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="img/icons/icon-180x180.png">
+
+  <!-- Style CSS -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Web App Manifest -->
+  <link rel="manifest" href="manifest.json">
+</head>
+
+<body>
+  <!-- Preloader -->
+  <div id="preloader">
+    <div class="spinner-grow text-primary" role="status">
+      <span class="visually-hidden">Loading...</span>
+    </div>
+  </div>
+
+  <!-- Internet Connection Status -->
+  <div class="internet-connection-status" id="internetStatus"></div>
+
+  <!-- Header Area -->
+  <div class="header-area" id="headerArea">
+    <div class="container">
+      <!-- Header Content -->
+      <div class="header-content header-style-five position-relative d-flex align-items-center justify-content-between">
+        <!-- Logo Wrapper -->
+        <div class="logo-wrapper">
+          <a href="index.html">
+           <!-- <img src="img/core-img/logo.png" alt="">-->
+           <span class="user-name mb-0">Israel Molina</span>
+          </a>
+        </div>
+
+        <!-- Navbar Toggler -->
+        <div class="navbar--toggler" id="affanNavbarToggler" data-bs-toggle="offcanvas" data-bs-target="#affanOffcanvas"
+          aria-controls="affanOffcanvas">
+          <span class="d-block"></span>
+          <span class="d-block"></span>
+          <span class="d-block"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- # Sidenav Left -->
+  <div class="offcanvas offcanvas-start" id="affanOffcanvas" data-bs-scroll="true" tabindex="-1"
+    aria-labelledby="affanOffcanvsLabel">
+
+    <button class="btn-close btn-close-white text-reset" type="button" data-bs-dismiss="offcanvas"
+      aria-label="Close"></button>
+
+    <div class="offcanvas-body p-0">
+      <div class="sidenav-wrapper">
+        <!-- Sidenav Profile -->
+        <div class="sidenav-profile bg-gradient">
+          <div class="sidenav-style1"></div>
+
+          <!-- User Thumbnail -->
+          <div class="user-profile">
+            <img src="img/bg-img/2.jpg" alt="">
+          </div>
+
+          <!-- User Info -->
+          <div class="user-info">
+            <h6 class="user-name mb-0">Israel Molina</h6>
+            <span>Desarrollador Web</span>
+          </div>
+        </div>
+
+        <!-- Sidenav Nav -->
+        <ul class="sidenav-nav ps-0">
+          <li>
+            <a href="index.html"><i class="bi bi-house-door"></i> Inicio</a>
+          </li> 
+          <li>
+            <a href="settings.html"><i class="bi bi-gear"></i> Configuración</a>
+          </li>
+          <li>
+            <div class="night-mode-nav">
+              <i class="bi bi-moon"></i> Modo Noche
+              <div class="form-check form-switch">
+                <input class="form-check-input form-check-success" id="darkSwitch" type="checkbox">
+              </div>
+            </div>
+          </li>
+          <li>
+            <a href=""><i class="bi bi-box-arrow-right"></i> Logout</a>
+          </li>
+        </ul>
+
+        <!-- Social Info -->
+        <div class="social-info-wrap">
+          <a href="#">
+            <i class="bi bi-facebook"></i>
+          </a>
+          <a href="#">
+            <i class="bi bi-twitter"></i>
+          </a>
+          <a href="#">
+            <i class="bi bi-linkedin"></i>
+          </a>
+        </div>
+
+        <!-- Copyright Info -->
+        <div class="copyright-info">
+          <p>
+            <span id="copyrightYear"></span>
+            &copy; Designed By  <a href="#">Israel Molina.
+            </a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="page-content-wrapper">
+
+    <!-- Welcome Toast -->
+    <div class="toast toast-autohide custom-toast-1 toast-dark home-page-toast shadow" role="alert" aria-live="assertive" aria-atomic="true"
+    data-bs-delay="6000" data-bs-autohide="true" id="installWrap">
+      <div class="toast-body p-4">
+        <div class="toast-text me-2">
+          <h6 class="text-white">Bienvenid@!</h6>
+          <span class="d-block mb-2">Click en <strong>Instalar ahora</strong> y podrás ver el sitio como un app nativa.</span>
+          <button id="installAffan" class="btn btn-sm btn-success">Instalar</button>
+        </div>
+      </div>
+      <button class="btn btn-close btn-close-white position-absolute p-2" type="button" data-bs-dismiss="toast"
+        aria-label="Close"></button>
+    </div>
+
+    <!-- Tiny Slider One Wrapper -->
+    <div class="tiny-slider-one-wrapper">
+      <div class="tiny-slider-one">
+        <!-- Single Hero Slide -->
+        <div>
+     <!--<div class="single-hero-slide bg-overlay" style="background-image: url('img/bg-img/31.jpg')">-->
+          <div class="single-hero-slide bg-overlay">
+            <div class="h-100 d-flex align-items-center text-center">
+              <div class="container">
+                <h3 class="text-white mb-1">Consultor Web y Desarrollador Freelance</h3>
+                <p class="text-white mb-4">Haz que tu sitio web sea tu mejor carta de presentación.</p>
+                <a class="btn btn-creative btn-success" href="#">Contactar</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Single Hero Slide -->
+        <div>
+          <div class="single-hero-slide bg-overlay">
+            <div class="h-100 d-flex align-items-center text-center">
+              <div class="container">
+                <h3 class="text-white mb-1">Desarrollo Y Diseño Web A Medida</h3>
+                <p class="text-white mb-4">Transforma tu negocio en línea con soluciones innovadoras y personalizadas.</p>
+                <a class="btn btn-creative btn-success" href="#">Contactar</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Single Hero Slide -->
+        <div>
+          <div class="single-hero-slide bg-overlay">
+            <div class="h-100 d-flex align-items-center text-center">
+              <div class="container">
+                <h3 class="text-white mb-1">Mantenimiento Web</h3>
+                <p class="text-white mb-4">  <br></p>
+                <a class="btn btn-creative btn-success" href="#">Contactar</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+     
+
+        <!-- Single Hero Slide -->
+        <div>
+          <div class="single-hero-slide bg-overlay">
+            <div class="h-100 d-flex align-items-center text-center">
+              <div class="container">
+                <h3 class="text-white mb-1">Dark &amp; RTL Ready</h3>
+                <p class="text-white mb-4">You can use the Dark or <br> RTL mode of your choice.</p>
+                <a class="btn btn-creative btn-success" href="#">Buy Now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+
+    <div class="pt-3"></div>
+
+    <div class="container direction-rtl">
+      <div class="card mb-3">
+        <div class="card-body">
+          <div class="row g-3">
+            <div class="col-4">
+              <div class="feature-card mx-auto text-center">
+                <div class="card mx-auto bg-dark">
+                  <!--<img src="img/demo-img/pwa.png" alt="">-->    
+                  <i class="bi bi-book text-success fs-2"></i>   <!-- Icono negro (útil para fondos claros)   fs1 a fs 6 es el tamaño -->
+
+
+                </div>
+               
+                <span>Planificación</span>
+                
+                <p class="mb-0">Recopilamos información y objetivos para crear una propuesta.</p>
+              </div>
+            </div>
+
+            <div class="col-4">
+              <div class="feature-card mx-auto text-center">
+                <div class="card mx-auto bg-dark">
+                  <i class="bi bi-braces text-success fs-2"></i>   <!-- Icono negro (útil para fondos claros)   fs1 a fs 6 es el tamaño -->
+                </div>
+                <span>Desarrollo</span>
+                <p class="mb-0">El desarrollador hace ajustes para cumplir con las especificaciones.</p>
+
+              </div>
+            </div>
+
+            <div class="col-4">
+              <div class="feature-card mx-auto text-center">
+                <div class="card mx-auto bg-dark">
+                  <i class="bi bi-cloud-check text-success fs-2"></i>   <!-- Icono negro (útil para fondos claros)   fs1 a fs 6 es el tamaño -->
+                </div>
+                <span>Publicación</span>
+                <p class="mb-0">El sitio web es publicado en línea.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="card card-bg-img bg-img bg-overlay mb-3">
+        <div class="card-body direction-rtl p-4">
+          <h2 class="text-white">Diseño Web Y Desarrollo Con WordPress o con HTML, CSS, JavaScript y Bootstrap</h2>
+          <p class="mb-3 text-white">Haz que tu sitio web sea tu mejor carta de presentación. Ofrezco Servicios Web Para Agencias Y Empresas que buscan crear y potenciar su presencia en línea de manera auténtica y efectiva</p>
+          <a class="btn btn-success" href="https://api.whatsapp.com/send?phone=34632307825&text=Hola,%20necesito%20una%20pagina%20web">Contactar <i class="bi bi-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+
+
+
+
+    <!--INICIO-->
+     <!-- Element Heading -->
+     <div class="container">
+      <div class="element-heading">
+        <h6>Diseño web para emprendedores y empresas</h6>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="card">
+        <div class="card-body">
+          <!-- Price Table One -->
+          <div class="price-table-one">
+            <ul class="nav nav-tabs border-bottom-0 mb-3 align-items-center justify-content-center" id="priceTab"
+              role="tablist">
+              <li class="nav-item" role="presentation">
+                <a class="nav-link active shadow" id="priceTabOne" data-bs-toggle="tab" href="#priceTab_One" role="tab"
+                  aria-controls="priceTab_One" aria-selected="true">
+                  <i class="bi bi-cloud-check-fill"></i>
+                </a>
+              </li>
+
+              <li class="nav-item" role="presentation">
+                <a class="nav-link shadow" id="priceTabTwo" data-bs-toggle="tab" href="#priceTab_Two" role="tab"
+                  aria-controls="priceTab_Two" aria-selected="false">
+                  <i class="bi bi-shop"></i>
+                </a>
+              </li>
+
+              <li class="nav-item" role="presentation">
+                <a class="nav-link shadow" id="priceTabThree" data-bs-toggle="tab" href="#priceTab_Three" role="tab"
+                  aria-controls="priceTab_Three" aria-selected="false">
+                  <i class="bi bi-braces"></i>
+                </a>
+              </li>
+            </ul>
+
+            <div class="tab-content" id="priceTabContent">
+              <div class="tab-pane fade show active" id="priceTab_One" role="tabpanel" aria-labelledby="priceTabOne">
+                <!-- Single Price Table -->
+                <div class="single-price-content shadow-sm">
+                  <div class="price">
+                    <span class="text-white mb-2">Informativa</span>
+                    <h2 class="display-3">Web</h2>
+                    <span class="badge bg-light text-dark rounded-pill">Para Emprendedores</span>
+                  </div>
+                  <!-- Pricing Desc -->
+                  <div class="pricing-desc">
+                    <ul class="ps-0">
+                      <li><i class="bi bi-check-lg me-2"></i>1 Página de inicio </li>
+                      <li><i class="bi bi-check-lg me-2"></i>1 Página de contacto </li>
+                      <li><i class="bi bi-check-lg me-2"></i>1 año de Alojamiento y dominio</li>
+                      <li><i class="bi bi-check-lg me-2"></i>Email Profesional</li>
+                      <li><i class="bi bi-check-lg me-2"></i>Botones a redes sociales</li>
+                    </ul>
+                  </div>
+                  <!-- Purchase -->
+                  <div class="purchase">
+                    <a class="btn btn-warning btn-lg btn-creative w-100" href="https://api.whatsapp.com/send?phone=34632307825&text=Hola,%20necesito%20una%20pagina%20web">Contactar</a>
+                    <small class="d-block text-white mt-2 ms-1">Presupuesto sin compromiso*</small>
+               
+                    
+
+                  </div>
+                </div>
+              </div>
+
+              <div class="tab-pane fade" id="priceTab_Two" role="tabpanel" aria-labelledby="priceTabTwo">
+                <!-- Single Price Table -->
+                <div class="single-price-content shadow-sm">
+                  <div class="price">
+                    <span class="text-white mb-2">Tienda</span>
+                    <h2 class="display-3">Store</h2>
+                    <span class="badge bg-light text-dark rounded-pill">Tienda en línea</span>
+                  </div>
+                  <!-- Pricing Desc -->
+                  <div class="pricing-desc">
+                    <ul class="ps-0">
+                      <li><i class="bi bi-check-lg me-2"></i>5 Páginas</li>
+                      <li><i class="bi bi-check-lg me-2"></i>1 año de Alojamiento y dominio</li>
+                      <li><i class="bi bi-check-lg me-2"></i>Email Profesional</li>
+                      <li><i class="bi bi-check-lg me-2"></i>Botones a redes sociales</li>
+                      <li><i class="bi bi-check-lg me-2"></i>Integración pasarela de pagos</li>
+                    </ul>
+                  </div>
+                  <!-- Purchase -->
+                  <div class="purchase">
+                    <a class="btn btn-light btn-lg btn-creative" href="https://api.whatsapp.com/send?phone=34632307825&text=Hola,%20necesito%20una%20pagina%20web">Contactar</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="tab-pane fade" id="priceTab_Three" role="tabpanel" aria-labelledby="priceTabThree">
+                <!-- Single Price Table -->
+                <div class="single-price-content shadow-sm">
+                  <div class="price">
+                    <span class="text-white mb-2">A Medida</span>
+                    <h2 class="display-3">App</h2>
+                    <span class="badge bg-light text-dark rounded-pill">Empresas</span>
+                  </div>
+                  <!-- Pricing Desc -->
+                  <div class="pricing-desc">
+                    <ul class="ps-0">
+                      <li><i class="bi bi-check-lg me-2"></i>Tecnologías: Bootstrap, HTML, CSS, JavaScript, PHP, Python</li>
+                      <li><i class="bi bi-check-lg me-2"></i>1 año de Alojamiento y dominio</li>
+                      <li><i class="bi bi-check-lg me-2"></i>Aplicación web a medida</li>
+                      <li><i class="bi bi-check-lg me-2"></i>Motor de reservas o citas</li>
+                      <li><i class="bi bi-check-lg me-2"></i>PWA (Aplicación Web Progresiva)</li>
+                    </ul>
+                  </div>
+                  <!-- Purchase -->
+                  <div class="purchase">
+                    <a class="btn btn-primary btn-lg btn-creative" href="https://api.whatsapp.com/send?phone=34632307825&text=Hola,%20necesito%20una%20pagina%20web">Contactame</a>
+                    <small class="d-block text-white mt-2 ms-1">¿Necesitas un motor de reservas, gestión de empleados o control de pedidos?</small>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--FINAL-->
+ 
+
+    <div class="container">
+      <div class="card bg-primary mb-3 bg-img" style="background-image: url('img/core-img/1.png')">
+        <div class="card-body direction-rtl p-4">
+          <h2 class="text-white">Compromiso con Tu Éxito</h2>
+          <p class="mb-3 text-white">Mi compromiso es con tu éxito. Cada proyecto en mi portafolio es un muestra de la dedicación para llevar tu negocio en línea al siguiente nivel, porque entiendo la importancia de la calidad y la satisfacción del cliente.</p>
+          <a class="btn btn-warning" href="https://api.whatsapp.com/send?phone=34632307825&text=Hola,%20necesito%20una%20pagina%20web">Contactar<i class="bi bi-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+<!--INICIO CARDS-->
+<div class="page-content-wrapper py-3">
+  <div class="team-member-wrapper direction-rtl">
+    <div class="container">
+      <div class="row g-3">
+
+        <!-- Single Team Member -->
+        <div class="col-6">
+          <div class="card team-member-card shadow">
+            <div class="card-body">
+              <!-- Member Image-->
+              <div class="team-member shadow-sm">
+                <img src="img/bg-img/desarrollo-web-estudio-de-rodaje.webp" alt="">
+              </div>
+              <!-- Team Info-->
+              <div class="team-info">
+                <h6 class="mb-1 fz-14">Estudio De Rodaje</h6>
+                <p class="mb-0 fz-12">Desarrollé un sitio web para un cliente que dirige un estudio de rodaje en España. </p>
+              </div>
+            </div>
+            <!-- Contact Info-->
+            <div class="contact-info bg-primary">
+              <a href="https://estudioderodaje.com/" class="mb-0 text-truncate text-white" target="_blank">
+                Visitar Web
+            </a>
+            
+            </div>
+          </div>
+        </div>
+
+        <!-- Single Team Member -->
+        <div class="col-6">
+          <div class="card team-member-card shadow">
+            <div class="card-body">
+              <!-- Member Image-->
+              <div class="team-member- shadow-sm">
+                <img src="img/bg-img/DISENO-WEB-La-Vaporeria.webp" alt="">
+              </div>
+              <!-- Team Info-->
+              <div class="team-info">
+                <h6 class="mb-1 fz-14">La Vaporeria</h6>
+                <p class="mb-0 fz-12">Diseñé el sitio web de La Vaporeria utilizando Elementor y WooCommerce.</p>
+              </div>
+            </div>
+            <!-- Contact Info-->
+            <div class="contact-info bg-primary">
+             <!-- <p class="mb-0 text-truncate">Visitar Web</p>-->
+              <a href="https://lavaporeria.com/" class="mb-0 text-truncate text-white" target="_blank">
+                Visitar Web
+            </a>
+            
+            </div>
+          </div>
+        </div>
+
+   
+
+      </div>
+    </div>
+  </div>
+</div>
+<!--FINAL CARDS-->
+
+
+ 
+
+    <div class="pb-3"></div>
+  </div>
+<!--INICIO ABOUT-->
+<div class="page-content-wrapper py-3">
+  <div class="container">
+    <div class="card image-gallery-card direction-rtl">
+      <div class="card-body">
+        <h5>Sobre mí</h5>
+        <p>💻 Soy un consultor web y desarrollador freelance con amplia experiencia en la creación y mantenimiento 
+          de sitios web. 🌐 Actualmente resido en España y he tenido la oportunidad de trabajar con diversas agencias 
+          tanto en España como en Alemania y varios países de Latinoamérica. ✨ 🌎 Al ser freelance, 
+          tengo la flexibilidad de colaborar de manera remota con agencias fuera del país, adaptándome a tus necesidades
+           y horarios. 🕒</p>
+        <p>📚 Estoy estudiando formación profesional en desarrollo web, así que siempre estoy al día con las últimas tecnologías y tendencias. 📚💻</p>
+
+          <p>Ya sea que necesites una página web desde cero o darle mantenimiento a tu sitio existente, estoy aquí para ayudarte 
+          a alcanzar tus objetivos en internet. 🚀</p>
+        <p>También gestiono DisoWeb (disoweb.com), un espacio donde combino mi experiencia en desarrollo web con un equipo especializado para ofrecer soluciones digitales personalizadas.</p>
+      
+
+        <h5>Tecnologías en mis proyectos</h5>
+        <p>A lo largo de mi trayectoria como desarrollador, he trabajado en proyectos que han incluido el uso de diversas tecnologías, con la siguiente distribución aproximada:</p>
+
+        <!-- Single Skill Progress Bar -->
+        <div class="skill-progress-bar d-flex align-items-center">
+          <!-- Skill Icon -->
+          <div class="skill-icon shadow-sm p-2">
+            <i class="bi bi-filetype-js text-warning fz-20"></i>
+          </div>
+
+          <div class="skill-data">
+            <!-- Skill Name -->
+            <div class="skill-name d-flex align-items-center justify-content-between">
+              <p class="mb-1">JavaScript</p>
+              <small class="mb-1">
+                <span class="counter">95</span>%
+              </small>
+            </div>
+
+            <!-- Progress -->
+            <div class="progress" style="height: 4px;">
+              <div class="progress-bar bg-warning" style="width: 95%;" role="progressbar" aria-valuenow="95" aria-valuemin="0"
+                aria-valuemax="100"></div>
+            </div>
+          </div>
+        </div>
+
+           <!-- Single Skill Progress Bar -->
+           <div class="skill-progress-bar d-flex align-items-center">
+            <!-- Skill Icon -->
+            <div class="skill-icon shadow-sm p-2">
+              <i class="bi bi-code text-dark fz-20"></i>
+            </div>
+  
+            <div class="skill-data">
+              <!-- Skill Name -->
+              <div class="skill-name d-flex align-items-center justify-content-between">
+                <p class="mb-1">PHP</p>
+                <small class="mb-1">
+                  <span class="counter">95</span>%
+                </small>
+              </div>
+  
+              <!-- Progress -->
+              <div class="progress" style="height: 4px;">
+                <div class="progress-bar" style="width: 95%;" role="progressbar" aria-valuenow="95" aria-valuemin="0"
+                  aria-valuemax="100"></div>
+              </div>
+            </div>
+          </div>
+
+        <!-- Single Skill Progress Bar -->
+        <div class="skill-progress-bar d-flex align-items-center">
+          <!-- Skill Icon -->
+          <div class="skill-icon shadow-sm p-2">
+            <i class="bi bi-filetype-html text-success fz-20"></i>
+          
+          </div>
+
+          <div class="skill-data">
+            <!-- Skill Name -->
+            <div class="skill-name d-flex align-items-center justify-content-between">
+              <p class="mb-1">Html</p>
+              <small class="mb-1">
+                <span class="counter">96</span>%
+              </small>
+            </div>
+
+            <!-- Progress -->
+            <div class="progress" style="height: 4px;">
+              <div class="progress-bar bg-success" style="width: 96%;" role="progressbar" aria-valuenow="96"
+                aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Single Skill Progress Bar -->
+        <div class="skill-progress-bar d-flex align-items-center">
+          <!-- Skill Icon -->
+          <div class="skill-icon shadow-sm p-2 fz-20">
+            <i class="bi bi-bootstrap text-primary"></i>
+          </div>
+
+          <div class="skill-data">
+            <!-- Skill Name -->
+            <div class="skill-name d-flex align-items-center justify-content-between">
+              <p class="mb-1">Bootstrap 5</p>
+              <small class="mb-1">
+                <span class="counter">88</span>%
+              </small>
+            </div>
+
+            <!-- Progress -->
+            <div class="progress" style="height: 4px;">
+              <div class="progress-bar bg-info" style="width: 88%;" role="progressbar" aria-valuenow="88"
+                aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="row">
+
+            <!-- Single Counter -->
+            <div class="col-4">
+              <div class="single-counter-wrap text-center mb-4">
+                <i class="bi bi-cloud-check-fill mb-1 text-primary"></i>
+                <h4 class="mb-0 text-dark">
+                  <span class="counter">50</span>+
+                </h4>
+                <p>Web Informativa</p>
+              </div>
+            </div>
+
+
+              <!-- Single Counter -->
+          <div class="col-4">
+            <div class="single-counter-wrap text-center mb-4">
+              <i class="bi bi-shop mb-1 text-danger"></i>
+              <h4 class="mb-0 text-danger">
+                <span class="counter">10</span>+
+              </h4>
+              <p>Tiendas</p>
+            </div>
+          </div>
+
+          <!-- Single Counter -->
+          <div class="col-4">
+            <div class="single-counter-wrap text-center mb-4">
+              <i class="bi bi-braces mb-1 text-success"></i>
+              <h4 class="mb-0 text-success">
+                <span class="counter">5</span>+
+              </h4>
+              <p>App a Medida</p>
+            </div>
+          </div>
+
+        
+
+        
+        </div>
+
+        <p class="mb-4">Cada proyecto ha sido una oportunidad para aplicar y perfeccionar estas tecnologías, asegurando soluciones eficientes y adaptadas a las necesidades de mis clientes.</p>
+       
+
+        <a href="#" class="btn btn-primary mt-3 w-100">Contactar</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--FINAL ABOUT-->
+  <!-- Footer Nav -->
+  <div class="footer-nav-area" id="footerNav">
+    <div class="container px-0">
+      <!-- Footer Content -->
+      <div class="footer-nav position-relative">
+        <ul class="h-100 d-flex align-items-center justify-content-between ps-0">
+       
+
+      
+
+          <li>
+            <a href="">
+              <i class="bi bi-chat-dots"></i>
+              <span>Contacto</span>
+            </a>
+          </li>
+          <li class="active">
+            <a href="index.html">
+              <i class="bi bi-house"></i>
+              <span>Home</span>
+            </a>
+          </li>
+          <li>
+            <a href="settings.html">
+              <i class="bi bi-gear"></i>
+              <span>Configuración</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- All JavaScript Files -->
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/slideToggle.min.js"></script>
+  <script src="js/internet-status.js"></script>
+  <script src="js/tiny-slider.js"></script>
+  <script src="js/venobox.min.js"></script>
+  <script src="js/countdown.js"></script>
+  <script src="js/rangeslider.min.js"></script>
+  <script src="js/vanilla-dataTables.min.js"></script>
+  <script src="js/index.js"></script>
+  <script src="js/imagesloaded.pkgd.min.js"></script>
+  <script src="js/isotope.pkgd.min.js"></script>
+  <script src="js/dark-rtl.js"></script>
+  <script src="js/active.js"></script>
+  <script src="js/pwa.js"></script>
+</body>
+
+</html>
