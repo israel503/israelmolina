@@ -960,6 +960,7 @@ caption,
   --primary-800: #0139b1;
   --primary-900: #01297e;
   --primary-950: #011542;
+  --primary-9950: #fafafa;
   --secondary-500: #8696a7;
   --secondary-700: #546474;
   --success-500: #2ecc4a;
@@ -999,7 +1000,7 @@ h3,
 h4,
 h5,
 h6 {
-  color: var(--primary-950);
+  color: var(--primary-9950);
   font-weight: 600;
 }
 
