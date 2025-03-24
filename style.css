@@ -3541,6 +3541,7 @@ a.affan-element-item:hover, a.affan-element-item:focus {
 .card {
   border: 0;
   border-radius: 6px;
+  color: var(--primary-950);
 }
 
 .card-img,
