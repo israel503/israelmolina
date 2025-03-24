@@ -979,6 +979,7 @@ caption,
   --dark-secondary: #242644;
 
   --seccion-store: #444546;
+  --seccion-app: #c1f3ef;
 }
  
 * {
@@ -5709,7 +5710,7 @@ form .btn-lg {
   background-color: var(--seccion-store);
 }
 .price-table-one .tab-content .tab-pane:nth-child(3) .single-price-content {
-  background-color: var(--success-500);
+  background-color: var(--seccion-app);
 }
 
 .price-table-two {
