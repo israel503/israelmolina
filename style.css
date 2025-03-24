@@ -5794,7 +5794,7 @@ form .btn-lg {
   color: var(--primary-200);
 }
 .price-table-two .single-price-table.active .badge {
-  background-color: var(--seccion-store) !important;
+  background-color: var(--primary-50) !important;
 }
 
 .comparison-table-one .table > :not(caption) > * > *,
