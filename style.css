@@ -948,7 +948,8 @@ caption,
 
 /* :: Reboot */
 :root {
-  --primary-50: #f0f5ff;
+  /**/
+  --primary-50: #7bf0f8;
   --primary-100: #e1eaff;
   --primary-200: #c2d5ff;
   --primary-300: #9abafe;
